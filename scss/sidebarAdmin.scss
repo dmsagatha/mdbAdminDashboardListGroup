@@ -1,5 +1,8 @@
-/* FrontEndFunn - https://www.youtube.com/watch?v=VPLWCTkGnd0 */
-/* Slide-Out Navigation Menu - https://www.templatemonster.com/blog/build-navigation-menu-css-jquery/ */
+/* 
+  FrontEndFunn - https://www.youtube.com/watch?v=VPLWCTkGnd0
+  Coding Freaks - https://www.youtube.com/watch?v=diZqpR-7uuA&t=787s
+  Slide-Out Navigation Menu - https://www.templatemonster.com/blog/build-navigation-menu-css-jquery/ 
+*/
 @function rem($value) {
   @return unquote(($value/1px)/16+"rem");
 }
@@ -32,6 +35,31 @@ $width: 250px;
     z-index: 2000;
     transition: all ease 0.25s;
     overflow-y: auto;
+    .list-group {
+      .list-group-item {
+        color: #ffffff;
+        font-size: medium;
+        display: block;
+        white-space: nowrap;
+        background-color: #3F729B;
+        &:hover {
+          color: #161616;
+          background-color: white;
+        }
+      }
+      /* Flecha para el SubMenu*/
+      .sidebar-dropdown > a::after {
+        position: absolute;
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        content: "\f078";  /* fa-chevron-down */
+        font-size: 1.3rem;
+        right: 1rem;
+      }
+      .sidebar-dropdown > a[aria-expanded='true']::after {
+        content: "\f077"; /* fa-chevron-up */
+      }
+    }
   }
   /* Contenido - Menú Navbar */
   .content {

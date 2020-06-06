@@ -35,6 +35,34 @@
   overflow-y: auto;
 }
 
+.wrapper .offCanvas .list-group .list-group-item {
+  color: #ffffff;
+  font-size: medium;
+  display: block;
+  white-space: nowrap;
+  background-color: #3F729B;
+}
+
+.wrapper .offCanvas .list-group .list-group-item:hover {
+  color: #161616;
+  background-color: white;
+}
+
+.wrapper .offCanvas .list-group .sidebar-dropdown > a::after {
+  position: absolute;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: "\f078";
+  /* fa-chevron-down */
+  font-size: 1.3rem;
+  right: 1rem;
+}
+
+.wrapper .offCanvas .list-group .sidebar-dropdown > a[aria-expanded='true']::after {
+  content: "\f077";
+  /* fa-chevron-up */
+}
+
 .wrapper .content .mainNavbar,
 .wrapper .content .mainContainer {
   transform: translateX(0);
