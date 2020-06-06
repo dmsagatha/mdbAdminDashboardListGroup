@@ -35,14 +35,74 @@
       <div class="overlay"></div>
 
       <!--Sidebar -->
-      <div class="offCanvas unique-color">
+      <div class="offCanvas unique-color" id="sidebarMenu">
         <div class="text-center">
           <a class="logo-wrapper waves-effect" href="#">
             <img src="https://mdbootstrap.com/img/logo/mdb-email.png" class="img-fluid" alt="" style="width: 75%;">  
           </a>
         </div>
 
-        <div id="menu">
+        <div class="list-group list-group-flush">
+          <a href="#" class="list-group-item list-group-item-action waves-effect">
+            <i class="fas fa-chart-pie text-info mr-3"></i>Dashboard
+          </a>
+          <a href="#" class="list-group-item list-group-item-action waves-effect">
+            <i class="fas fa-user text-warning mr-3"></i>Profile
+          </a>
+
+          <div class="sidebar-dropdown">
+            <a 
+              href="#messages"
+              class="list-group-item list-group-item-action waves-effect collapsed"
+              data-toggle="collapse"
+              data-target="#messages"
+              aria-expanded="false">
+              <i class="fas fa-chart-pie text-info mr-3"></i>SubMenu Messages
+            </a>
+            <div class="collapse" id="messages" data-parent="#sidebarMenu">
+              <a href="#" class="list-group-item small">
+                <i class="fas fa-inbox pink-text mr-3 ml-2"></i>Inbox
+              </a>
+              <a class="list-group-item small">
+                <i class="fas fa-seedling purple-text mr-3 ml-2"></i>Sent
+              </a>
+            </div>
+          </div><!-- sidebar-dropdown Messages -->
+
+          <div class="sidebar-dropdown">
+            <a 
+              href="#tasks"
+              class="list-group-item list-group-item-action waves-effect collapsed"
+              data-toggle="collapse"
+              data-target="#tasks"
+              aria-expanded="false">
+              <i class="fas fa-tasks text-danger mr-3"></i>SubMenu Tasks
+            </a>
+            <div class="collapse" id="tasks" data-parent="#sidebarMenu">
+              <a class="list-group-item small">
+                <i class="fas fa-code teal-text mr-3 ml-2"></i>Saved tasks
+              </a>
+              <a class="list-group-item small">
+                <i class="fas fa-bomb orange-text mr-3 ml-2"></i>Add new task
+              </a>
+            </div>
+          </div><!-- sidebar-dropdown Tasks -->
+            
+          <a href="#" class="list-group-item list-group-item-action waves-effect">
+            <i class="fas fa-table green-text mr-3"></i>Tables
+          </a>
+          <a href="https://www.youtube.com/watch?v=VPLWCTkGnd0" target="_blank" class="list-group-item list-group-item-action waves-effect">
+            <i class="fas fa-video text-warning mr-3"></i> FrontEndFunn - Sidebar
+          </a>
+          <a href="https://www.templatemonster.com/blog/build-navigation-menu-css-jquery/"  target="_blank" class="list-group-item list-group-item-action waves-effect">
+            <i class="fas fa-code text-info mr-3"></i> Slide-Out - Código
+          </a>
+          <a href="https://www.youtube.com/watch?v=diZqpR-7uuA&t=787s" target="_blank" class="list-group-item list-group-item-action waves-effect">
+            <i class="fas fa-video text-warning mr-3"></i> Coding Freaks - Sidebar
+          </a>
+        </div><!-- list-group list-group-flush -->
+
+        <!-- <div id="menu">
           <div class="list-group list-group-flush">
             <a href="#" class="list-group-item active waves-effect">
               <i class="fas fa-chart-pie text-info mr-3"></i>Dashboard
@@ -51,7 +111,7 @@
               <i class="fas fa-user text-warning mr-3"></i>Profile
             </a>
 
-            <a href="#" class="list-group-item waves-effect" data-toggle="collapse" data-target="#sm1" data-parent="#menu">
+            <a href="#" class="list-group-item list-group-item-action waves-effect" data-toggle="collapse" data-target="#sm1" data-parent="#menu">
               <i class="fas fa-chart-pie text-info mr-3"></i>SubMenu Messages
             </a>
             <div id="sm1" class="sublinks collapse">
@@ -59,24 +119,28 @@
                 <i class="fas fa-inbox pink-text mr-3 ml-2"></i>Inbox
               </a>
               <a class="list-group-item small">
-                <i class="fas fa-seedling purple-text mr-3 ml-2"></i>Sent</a>
+                <i class="fas fa-seedling purple-text mr-3 ml-2"></i>Sent
+              </a>
             </div>
 
-            <a href="#" class="list-group-item waves-effect" data-toggle="collapse" data-target="#sm2" data-parent="#menu">
+            <a href="#" class="list-group-item list-group-item-action waves-effect" data-toggle="collapse" data-target="#sm2" data-parent="#menu">
               <i class="fas fa-tasks text-danger mr-3"></i>SubMenu Tasks
             </a>
             <div id="sm2" class="sublinks collapse">
               <a class="list-group-item small">
-                <i class="fas fa-code teal-text mr-3 ml-2"></i>Saved tasks</a>
+                <i class="fas fa-code teal-text mr-3 ml-2"></i>Saved tasks
+              </a>
               <a class="list-group-item small">
-                <i class="fas fa-bomb orange-text mr-3 ml-2"></i>Add new task</a>
+                <i class="fas fa-bomb orange-text mr-3 ml-2"></i>Add new task
+              </a>
             </div>
             
             <a href="#" class="list-group-item list-group-item-action waves-effect">
               <i class="fas fa-table green-text mr-3"></i>Tables
             </a>
           </div>
-        </div>
+        </div> -->
+        <!-- Menu -->
       </div><!-- offCanvas -->
 
       <div class="content">
@@ -1353,7 +1417,7 @@
       
           </footer>
         </div>
-      </div>
+      </div><!-- Content -->
     </div>
 
     <!-- SCRIPTS -->
