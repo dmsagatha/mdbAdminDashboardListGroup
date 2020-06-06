@@ -1,0 +1,61 @@
+@charset "UTF-8";
+/* FrontEndFunn - https://www.youtube.com/watch?v=VPLWCTkGnd0 */
+/* Slide-Out Navigation Menu - https://www.templatemonster.com/blog/build-navigation-menu-css-jquery/ */
+/* Todo el contenido de la página */
+.wrapper {
+  overflow-x: hidden;
+  /* Capa sobrepuesta */
+  /* Menú lateral fijo */
+  /* Contenido - Menú Navbar */
+  /* Trasladar el Menú lateral a la izquierda */
+  /* Activar los estados con jQuery - Capa sobrepuesta */
+}
+
+.wrapper .overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1999;
+  cursor: pointer;
+  display: none;
+}
+
+.wrapper .offCanvas {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 15.625rem;
+  z-index: 2000;
+  transition: all ease 0.25s;
+  overflow-y: auto;
+}
+
+.wrapper .content .mainNavbar,
+.wrapper .content .mainContainer {
+  transform: translateX(0);
+  transition: all ease 0.25s;
+}
+
+.wrapper.leftCanvas .offCanvas {
+  left: 0;
+  transform: translateX(-250px);
+}
+
+.wrapper.active .overlay {
+  display: block;
+}
+
+.wrapper.active .offCanvas {
+  transform: translateX(0);
+}
+
+.wrapper.active.leftCanvas .content .mainNavbar,
+.wrapper.active.leftCanvas .content .mainContainer {
+  transform: translate(250px);
+}
+/*# sourceMappingURL=sidebarAdmin.css.map */

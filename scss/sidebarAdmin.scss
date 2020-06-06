@@ -1,0 +1,68 @@
+/* FrontEndFunn - https://www.youtube.com/watch?v=VPLWCTkGnd0 */
+/* Slide-Out Navigation Menu - https://www.templatemonster.com/blog/build-navigation-menu-css-jquery/ */
+@function rem($value) {
+  @return unquote(($value/1px)/16+"rem");
+}
+
+$width: 250px;
+
+/* Todo el contenido de la página */
+.wrapper {
+  overflow-x: hidden;
+  /* Capa sobrepuesta */
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1999;
+    cursor: pointer;
+    display: none;
+  }
+  /* Menú lateral fijo */
+  .offCanvas {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: rem($width);
+    z-index: 2000;
+    transition: all ease 0.25s;
+    overflow-y: auto;
+  }
+  /* Contenido - Menú Navbar */
+  .content {
+    .mainNavbar,
+    .mainContainer {
+      transform: translateX(0);
+      transition: all ease 0.25s;
+    }
+  }
+  /* Trasladar el Menú lateral a la izquierda */
+  &.leftCanvas {
+    .offCanvas {
+      left: 0;
+      transform: translateX(-$width);
+    }
+  }
+  /* Activar los estados con jQuery - Capa sobrepuesta */
+  &.active {
+    .overlay {
+      display: block;
+    }
+    .offCanvas {
+      transform: translateX(0);
+    }
+    &.leftCanvas {
+      .content {
+        .mainNavbar,
+        .mainContainer {
+          transform: translate($width);
+        }
+      }
+    }
+  }
+}
